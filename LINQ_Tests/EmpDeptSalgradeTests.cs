@@ -135,7 +135,7 @@ public class EmpDeptSalgradeTests
                 grades,
                 _ => 1,
                 _ => 1,
-                (e, s) => new { Losal = s.Losal, Hisal = s.Hisal, Sal = e.Sal, Grade = s.Grade, EName = e.EName }
+                (e, s) => new { s.Losal, s.Hisal, e.Sal, s.Grade, e.EName }
             )
             .Where(es => es.Sal >= es.Losal && es.Sal <= es.Hisal)
             .ToList();
